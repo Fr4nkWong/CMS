@@ -1,13 +1,8 @@
-SIYUCMS V6.1 快速开发内容管理系统
-===============
-
-> 运行环境要求PHP7.1+。
-
-> SIYUCMS 运行目录: public/
-
-## 在线手册
-
-+ [完全开发手册](https://www.kancloud.cn/ruoshuiyx/siyucms/)
+## CMS demo
+siyucms + onebase.sql
+- 分支
+    - `main`: 大作业代码
+    - `<name>`: 演示代码，每个人一个分支
 
 ## 安装
 
@@ -23,19 +18,4 @@ SIYUCMS V6.1 快速开发内容管理系统
 
 > 默认后台用户名：admin 密码：admin
 
-## 演示
-
-> [演示地址](http://v6.siyucms.com/admin)
-
 > 演示账户：test 密码：123456
-
-## 交流群
-
-> QQ群：883855822
-
-## 版权信息
-
-> 请尊重SIYUCMS开发者的劳动成果，SIYUCMS提供免费使用，但未授权前请保留前台 Powered by SIYUCMS ，并不得修改后台版权信息。
-
-> 版权所有Copyright © 2019-2020 by SIYUCMS (http://siyucms.com)
-All rights reserved。
