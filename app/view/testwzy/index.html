@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <header>
+
+    </header>
+    <body>
+        <form action="/testwzy/logout" type="post">
+            <?php if($usr) {
+                echo '你好, '. $usr . $is_stored_tip;
+                ?><br/><button type="submit">退出</button><?php
+            } else {
+                echo '你好, 陌生人';
+                ?><br/><a href="/testwzy/login">去登录</a><?php
+            } ?>
+        </form> 
+    </body>
+</html>
