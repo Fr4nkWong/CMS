@@ -7,12 +7,6 @@ use think\Request;
 use think\facade\Session;
 use think\facade\Cookie;
 
-// session.php 
-// session基本操作
-// request对象中读取session
-// session存在哪里
-// session驱动 
-// 自定义驱动 think\contract\SessionHandlerInterface
 
 class Testwzy extends BaseController
 {
@@ -20,7 +14,7 @@ class Testwzy extends BaseController
 
     public function __construct(Request $request)
     {
-		$this->request = $request;
+		$this->request = $request; // request对象中读取session
     }
 
     public function index()
@@ -49,8 +43,9 @@ class Testwzy extends BaseController
             $pwd = $this->request->param('pwd');
             $is_stored = $this->request->param('is_stored');
             $is_stored_tip = '  未选择记住账号';
+            Cookie::delete('usr');
             if($is_stored == 'on') {
-                Cookie::set('usr', $usr, 3600);
+                Cookie::set('usr', $usr);
                 $is_stored_tip = '  已记住账号，并保存到cookie';
             }
             Session::set('usr', $usr);

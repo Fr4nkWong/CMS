@@ -5,23 +5,30 @@
     <body>
         <form action="/testwzy/login" method="post">
             <label>账号：</label>
-            <input name="usr" value="" type="text" /><br/>
+            <input id="usr" name="usr" value="" type="text" /><br/>
             <label>密码：</label>
             <input name="pwd" value="" type="password" /><br/>
             <label>是否记住账号：</label>
-            <input name="is_stored" type="checkbox"/><br/>
+            <input id="remember" name="is_stored" type="checkbox"/><br/>
             <button type="submit">登录</button>
         </form>
     </body>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
+        const cookie = document.cookie;
+        let cookie_arr = cookie && cookie.match(/usr=(.*)/);
+        let usr = cookie_arr && cookie_arr[1];
+        if(usr) {
+            document.getElementById("remember").checked = true;
+            document.getElementById('usr').value = usr;
+        }
         function click_radio(e) {
             var o = e.target;
             o.checked = !o.checked;
-            if(o.checked) {
+            if (o.checked) {
                 o.value = true;
             } else {
                 o.value = false
             }
         }
-    </script> -->
+    </script>
 </html>
