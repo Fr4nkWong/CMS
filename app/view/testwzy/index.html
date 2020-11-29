@@ -5,7 +5,7 @@
     <body>
         <form action="/testwzy/logout" type="post">
             <?php if($usr) {
-                echo '你好, '. $usr . $is_stored_tip;
+                echo '你好, '. $usr . ' cookie:usr=' . $is_stored_tip;
                 ?><br/><button type="submit">退出</button><?php
             } else {
                 echo '你好, 陌生人';

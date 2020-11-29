@@ -7,11 +7,11 @@ return [
     'expire'    => 0,
     // cookie 保存路径
     'path'      => '/',
-    // cookie 有效域名
+    // cookie 有效域名 cookie由domain及其子domain共享
     'domain'    => '',
-    //  cookie 启用安全传输
+    //  cookie 启用安全传输 是否走https
     'secure'    => false,
-    // httponly设置
+    // httponly设置 
     'httponly'  => false,
     // 是否使用 setcookie
     'setcookie' => true,

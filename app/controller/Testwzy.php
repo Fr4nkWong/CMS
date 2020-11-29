@@ -22,9 +22,9 @@ class Testwzy extends BaseController
         if($this->request->isGet()) {
             $usr = Session::get('usr');
             $pwd = Session::get('pwd');
-            $is_stored_tip = Cookie::get('usr');
+            $is_stored_tip = Cookie::get('usr');    // cookie('usr')
             View::assign('is_stored_tip', $is_stored_tip);
-            if(Session::has('usr') && Session::has('pwd')) {
+            if(Session::has('usr') && Session::has('pwd')) {    // session('?usr')
                 View::assign('usr', $usr);
                 return View::fetch('index');
             }
@@ -43,12 +43,12 @@ class Testwzy extends BaseController
             $pwd = $this->request->param('pwd');
             $is_stored = $this->request->param('is_stored');
             $is_stored_tip = '  未选择记住账号';
-            Cookie::delete('usr');
+            Cookie::delete('usr'); // cookie('usr', null)
             if($is_stored == 'on') {
                 Cookie::set('usr', $usr);
                 $is_stored_tip = '  已记住账号，并保存到cookie';
             }
-            Session::set('usr', $usr);
+            Session::set('usr', $usr);  // session('usr', $usr)
             Session::set('pwd', $pwd);
             View::assign('usr', $usr);
             View::assign('is_stored_tip', $is_stored_tip);
@@ -58,14 +58,23 @@ class Testwzy extends BaseController
 
     public function logout()
     {
-        Session::delete('usr');
-        Session::delete('pwd');
-        Cookie::delete('usr');
+        Session::delete('usr'); // session('usr', null)
+        Session::delete('pwd'); // Session:clear()
+        Cookie::delete('usr');  // cookie('usr', null)
         return redirect('/testwzy/index');
     }
 
     public function hello($name = 'ThinkPHP6')
     {
-        return 'hello,' . $name;
+        Session::flash('flash', 'frank');
+        return 'hello,' . session('flash');
+    }
+
+    public function hello1()
+    {   
+        // Session::flush();
+        // Session::clear(); // session(null)
+        echo 'flash' . Session::has('flash') . '<br>';
+        echo 'usr' . Session::has('usr');
     }
 }
