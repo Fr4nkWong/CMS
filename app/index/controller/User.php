@@ -124,12 +124,12 @@ class User extends Base
         $username = trim(Request::post('username'));
         $password = trim(Request::post('password'));
         // 检查是否开启了验证码
-        $message_code = $this->system['message_code'];
-        if ($message_code) {
-            if (!captcha_check(Request::post("message_code"))) {
-                $this->error('验证码错误');
-            }
-        }
+        // $message_code = $this->system['message_code'];
+        // if ($message_code) {
+        //     if (!captcha_check(Request::post("message_code"))) {
+        //         $this->error('验证码错误');
+        //     }
+        // }
         // 校验用户名密码
         $result = \app\common\facade\User::login($username, $password);
         if ($result['error'] == 1) {
@@ -152,12 +152,12 @@ class User extends Base
         }
 
         // 验证码
-        $message_code = $this->system['message_code'];
-        if ($message_code) {
-            if (!captcha_check(input("post.message_code"))) {
-                $this->error('验证码错误');
-            }
-        }
+        // $message_code = $this->system['message_code'];
+        // if ($message_code) {
+        //     if (!captcha_check(input("post.message_code"))) {
+        //         $this->error('验证码错误');
+        //     }
+        // }
         $result = \app\common\facade\User::register($email, $password, $password2);
         if ($result['error'] == 1) {
             $this->error($result['msg']);

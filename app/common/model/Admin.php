@@ -86,14 +86,14 @@ class Admin extends Base
 
         $username = Request::param("username");
         $password = Request::param("password");
-        $open_code = $system['code'];
-        if ($open_code) {
-            $code = Request::param("vercode");
-            if (!captcha_check($code)) {
-                $data = ['error' => '1', 'msg' => '验证码错误'];
-                return json($data);
-            }
-        }
+        // $open_code = $system['code'];
+        // if ($open_code) {
+        //     $code = Request::param("vercode");
+        //     if (!captcha_check($code)) {
+        //         $data = ['error' => '1', 'msg' => '验证码错误'];
+        //         return json($data);
+        //     }
+        // }
         $result = self::where(['username' => $username, 'password' => md5($password)])->find();
 
         if (empty($result)) {
