@@ -14,7 +14,7 @@ siyucms + onebase.sql
 
 > 修改.env 中数据库配置信息（调试模式也是在这个文件中进行打开和关闭）
 
-> 访问后台并登录查看是否正常，后台目录为http://www.yourwebsite.com/admin （如无法访问请尝试隐藏index.php https://www.kancloud.cn/ruoshuiyx/siyucms/1032705）
+> 访问后台并登录查看是否正常，管理员后台登录地址为localhost:800/admin
 
 > 默认后台用户名：admin 密码：admin
 

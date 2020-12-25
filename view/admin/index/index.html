@@ -16,15 +16,16 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <a class="btn btn-app" href="{:url('system/edit',['id'=>1])}"><i class="fa fa-cogs"></i>系统设置</a><a
-                                class="btn btn-app" href="{:url('database/database')}"><i class="fa fa-database"></i>数据备份</a><a
-                                class="btn btn-app" href="{:url('module/index')}"><i class="fa fa-th-list"></i>模型管理</a><a
-                                class="btn btn-app" href="{:url('cate/index')}"><i class="fa fa-th"></i>栏目管理</a><a
-                                class="btn btn-app" href="{:url('link/index')}"><i class="fa fa-link"></i>友情链接</a><a
-                                class="btn btn-app" href="{:url('ad/index')}"><i class="fa fa-photo"></i>广告管理</a><a
-                                class="btn btn-app" href="{:url('debris/index')}"><i class="fa fa-puzzle-piece"></i>碎片管理</a><a
-                                class="btn btn-app" href="{:url('template/index')}"><i class="fa fa-code"></i>模板管理</a>
+                            <a class="btn btn-app" href="{:url('system/edit',['id'=>1])}"><i class="fa fa-cogs"></i>系统设置</a>
+                            <a class="btn btn-app" href="{:url('database/database')}"><i class="fa fa-database"></i>数据备份</a>
+                            <a class="btn btn-app" href="{:url('module/index')}"><i class="fa fa-th-list"></i>模型管理</a>
+                            <a class="btn btn-app" href="{:url('cate/index')}"><i class="fa fa-th"></i>栏目管理</a>
+                            <!-- <a class="btn btn-app" href="{:url('link/index')}"><i class="fa fa-link"></i>友情链接</a> -->
+                            <!-- <a class="btn btn-app" href="{:url('ad/index')}"><i class="fa fa-photo"></i>广告管理</a> -->
+                            <a class="btn btn-app" href="{:url('debris/index')}"><i class="fa fa-puzzle-piece"></i>碎片管理</a>
+                            <a class="btn btn-app" href="{:url('template/index')}"><i class="fa fa-code"></i>模板管理</a>
                         </div>
+                        
                         <!-- /.box-body -->
                     </div>
                 </div>
@@ -135,7 +136,7 @@
             <div class="box box-default">
                 <div class="box-header with-border">
                     <i class="fa fa-tag"></i>
-                    <h3 class="box-title">版本信息</h3>
+                    <h3 class="box-title">项目信息</h3>
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     </div>
@@ -144,24 +145,24 @@
                 <div class="box-body">
                     <table class="table table-bordered">
                         <tr>
-                            <td>当前版本</td>
-                            <td>SIYUCMS V{$config.siyu_version}</td>
+                            <td>项目名称</td>
+                            <td>11组CMS</td>
                         </tr>
                         <tr>
                             <td>基于框架</td>
-                            <td>ThinkPHP {$config.version} + AdminLTE</td>
+                            <td>ThinkPHP {$config.version}</td>
                         </tr>
-                        <tr>
-                            <td valign="middle" style="padding-top:15px">获取授权</td>
+                        <!-- <tr>
+                            <td valign="middle" style="padding-top:15px">开发参考</td>
                             <td>
                                 <a href="http://www.siyucms.com" target="_blank" class="btn btn-flat btn-success">获取授权</a>&nbsp;&nbsp;
                                 <a href="https://gitee.com/ruoshuiyx/tp6" target="_blank" class="btn btn-flat btn-warning">查看更新</a>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td colspan="2" class="study">
-                                <a href="https://www.kancloud.cn/ruoshuiyx/siyucms" target="_blank" class="btn btn-flat btn-default ">SIYUCMS 开发手册</a>
-                                <a href="https://www.kancloud.cn/manual/thinkphp6_0" target="_blank" class="btn btn-flat btn-default ">ThinkPHP6 开发手册</a>
+                                <a href="https://www.kancloud.cn/manual/thinkphp6_0/1037479" target="_blank" class="btn btn-flat btn-default ">ThinkPHP6 开发手册</a>
+                                <a href="https://www.mysqlzh.com/" target="_blank" class="btn btn-flat btn-default ">MySQL 开发手册</a>
                             </td>
                         </tr>
                     </table>
@@ -171,7 +172,7 @@
             <!--版本信息-->
 
             <!--推荐-->
-            <div class="box box-default" style=" margin: 15px 0;">
+            <!-- <div class="box box-default" style=" margin: 15px 0;">
                 <div class="box-header with-border">
                     <i class="fa fa-bullhorn"></i>
                     <h3 class="box-title">推荐</h3>
@@ -179,13 +180,14 @@
                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                         </button>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.box-header -->
-                <div class="box-body main_ad">
+                <!-- <div class="box-body main_ad">
 
-                </div>
+                </div> -->
                 <!-- /.box-body -->
-            </div>
+            <!-- </div> -->
+
             <!---->
             <div class="box box-default">
                 <div class="box-header with-border">
@@ -198,10 +200,9 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <p>SIYUCMS 基于 ThinkPHP {$config.version} + AdminLTE-2.4 开发<br>简单 / 易用 / 响应式 / 低门槛 。</p>
-                    <p>请尊重SIYUCMS开发者的劳动成果，未授权前请保留前台 Powered by SIYUCMS ，并不得修改后台版权信息。</p>
-                    <p class="text-light-blue juanzeng">如果SIYUCMS有帮到您，就请作者喝杯茶吧!</p>
-                    <small>--<cite title="Source Title">感谢您的使用！</cite></small>
+                    <p>高级WEB开发课程 第11组</p>
+                    <p class="text-light-blue">王梓懿 谢大涛 唐保香 李永强</p>
+                    <small>--<cite title="Source Title">欢迎朱老师来检查作业，老师辛苦了！还请给个高分呀~</cite></small>
                 </div>
                 <!-- /.box-body -->
             </div>
