@@ -105,7 +105,7 @@
                                 </tr>
                                 <tr>
                                     <td>服务器IP</td>
-                                    <td>{$config.server_ip}</td>
+                                    <td>{$config.server_ip ? $config.server_ip : "127.0.0.1"}</td>
                                 </tr>
                                 <tr>
                                     <td>WEB运行环境</td>
