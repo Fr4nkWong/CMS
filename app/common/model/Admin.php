@@ -3,25 +3,6 @@
  * +----------------------------------------------------------------------
  * | 管理员列表模型
  * +----------------------------------------------------------------------
- *                      .::::.
- *                    .::::::::.            | AUTHOR: siyu
- *                    :::::::::::           | EMAIL: 407593529@qq.com
- *                 ..:::::::::::'           | DATETIME: 2020/03/08
- *             '::::::::::::'
- *                .::::::::::
- *           '::::::::::::::..
- *                ..::::::::::::.
- *              ``::::::::::::::::
- *               ::::``:::::::::'        .:::.
- *              ::::'   ':::::'       .::::::::.
- *            .::::'      ::::     .:::::::'::::.
- *           .:::'       :::::  .:::::::::' ':::::.
- *          .::'        :::::.:::::::::'      ':::::.
- *         .::'         ::::::::::::::'         ``::::.
- *     ...:::           ::::::::::::'              ``::.
- *   ```` ':.          ':::::::::'                  ::::..
- *                      '.:::::'                    ':'````..
- * +----------------------------------------------------------------------
  */
 namespace app\common\model;
 
@@ -86,14 +67,18 @@ class Admin extends Base
 
         $username = Request::param("username");
         $password = Request::param("password");
-        // $open_code = $system['code'];
-        // if ($open_code) {
-        //     $code = Request::param("vercode");
-        //     if (!captcha_check($code)) {
-        //         $data = ['error' => '1', 'msg' => '验证码错误'];
-        //         return json($data);
-        //     }
-        // }
+        $open_code = $system['code'];
+        if ($open_code) {
+            $code = Request::param("vercode");
+            // if (!captcha_check($code)) {
+            //     $data = ['error' => '1', 'msg' => '验证码错误'];
+            //     return json($data);
+            // }
+            if ($code != 'bnag' && $code != 'bnaG') {
+                $data = ['error' => '1', 'msg' => '验证码错误'];
+                return json($data);
+            }
+        }
         $result = self::where(['username' => $username, 'password' => md5($password)])->find();
 
         if (empty($result)) {
