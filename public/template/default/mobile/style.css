@@ -713,7 +713,7 @@ body {
 .search.open {height: 50px}
 .search-form {
     background-color: #ffffff;
-    border-top: 1px solid #86bc42;
+    border-top: 1px solid #377ea9
     float: right;
     width: 290px;
 }
@@ -1406,7 +1406,7 @@ body {
     border: 0;
 }
 .subscribe-form > button {
-    border: 2px solid #86bc42;
+    border: 2px solid #377ea9;
     font-family: raleway;
     font-weight: 700;
     height: 100%;
@@ -1419,7 +1419,7 @@ body {
 }
 .subscribe-form > button:hover {
     background: #FFF;
-    border: 2px solid #86bc42;
+    border: 2px solid #377ea9;
 }
 .newsletter-form {overflow: hidden; padding: 36px 0;}
 .subscribe-form {
@@ -1648,7 +1648,7 @@ body {
     margin: 20px 0 20px;
 }
 .pagination-content.number .pagination li a,.pagination-content.number .pagination li span {
-    border: 1px solid #86bc42;
+    border: 1px solid #377ea9;
     display: inline-block;
     font-family: raleway;
     font-size: 14px;
@@ -1659,7 +1659,7 @@ body {
     width: 26px;padding: 0;
 }
 
-.pagination-content.number .pagination li.active span{ background-color:#86bc42}
+.pagination-content.number .pagination li.active span{ background-color:#377ea9}
 .pagination-content.number .pagination li a i {font-size: 20px; line-height: 25px;}
 .pagination-content.number .pagination li a:hover, .pagination-content.number .pagination li.current a {
     color: #ffffff;
@@ -2170,7 +2170,7 @@ span.comment-time {padding-right: 3px; position: relative;}
 /*  20.2 Event Details Sidebar
 /*----------------------------------------*/
 .recent-content-item > a {
-    border: 1px solid #86bc42;
+    border: 1px solid #377ea9;
     display: inline-block;
     float: left;
 }
@@ -2372,7 +2372,7 @@ span.c-text {display: inline-block;}
 .shortcode-area {padding: 72px 0 120px;}
 .shortcode-area i {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    border: 2px solid #86bc42;
+    border: 2px solid #377ea9;
     border-radius: 50%;
     font-size: 25px;
     height: 60px;
@@ -2406,7 +2406,7 @@ span.c-text {display: inline-block;}
     text-transform: capitalize;
 }
 .shortcode-area h3 {
-    border: 1px dashed #86bc42;
+    border: 1px dashed #377ea9;
     float: left;
     font-size: 32px;
     margin: 20px 0;
